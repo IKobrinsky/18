@@ -1,0 +1,14 @@
+import './scss/app.scss';
+import createMenu from './menu';
+import h from './h';
+import p from './p';
+var menu = createMenu();
+document.body.appendChild(menu);
+document.body.appendChild(h(1,'Моя первая веб-страница'));
+let H2aboutMe = h(2,'Про меня');
+H2aboutMe.appendChild(p('Меня зовут Илья. Я работаю <strong>программистом</strong>. Решил расширить свои знания на область, с которой не сталкивался на работе'));
+H2aboutMe.appendChild(p('Живу в Москве. Люблю интеллектуальные игры.'));
+document.body.appendChild(H2aboutMe);
+let H2study = h(2,'Чему я хочу научиться');
+H2study.appendChild(p('На <em>этом</em> курсе я хотел бы научиться создавать сайты с нуля.'));
+document.body.appendChild(H2study);
